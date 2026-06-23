@@ -1,2 +1,2 @@
-// Package test contains tests for github.com/fyne-io/gl-js.
+// Package test contains tests for github.com/trendvidia/gl-js.
 package test
