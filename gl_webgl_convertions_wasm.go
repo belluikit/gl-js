@@ -4,6 +4,7 @@ package gl
 
 import (
 	"fmt"
+	"reflect"
 	"runtime"
 	"syscall/js"
 	"unsafe"
@@ -71,6 +72,18 @@ func float64ToJSArray(s []float64) js.Value {
 
 func SliceToTypedArray(s any) js.Value {
 	if s == nil {
+		return js.Null()
+	}
+
+	// A typed-nil or empty slice — e.g. the []uint8(nil) the canvas FBO
+	// path passes to TexImage2D to allocate texture storage without data —
+	// must become a WebGL null, not a zero-length typed array. WebGL's
+	// texImage2D/texSubImage2D reject an ArrayBufferView smaller than
+	// width*height*bytesPerPixel, so a 0-length view throws INVALID_OPERATION
+	// where null correctly allocates uninitialized storage. The untyped
+	// `s == nil` check above does not catch a typed nil boxed in `any`
+	// (e.g. []uint8(nil)), so detect empty slices of any element type here.
+	if rv := reflect.ValueOf(s); rv.Kind() == reflect.Slice && rv.Len() == 0 {
 		return js.Null()
 	}
 
