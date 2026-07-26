@@ -19,8 +19,8 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/trendvidia/gl-js"
-	"github.com/trendvidia/gl-js/glutil"
+	"github.com/belluikit/gl-js"
+	"github.com/belluikit/gl-js/glutil"
 	"golang.org/x/mobile/event/size"
 	"golang.org/x/mobile/exp/f32"
 	"golang.org/x/mobile/geom"

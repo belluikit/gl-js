@@ -1,4 +1,4 @@
-module github.com/trendvidia/gl-js
+module github.com/belluikit/gl-js
 
 go 1.19
 

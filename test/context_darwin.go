@@ -40,7 +40,7 @@ import "C"
 import (
 	"runtime"
 
-	"github.com/trendvidia/gl-js"
+	"github.com/belluikit/gl-js"
 )
 
 // contextGL holds a copy of the OpenGL Context from thread-local storage.

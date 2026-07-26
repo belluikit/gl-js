@@ -85,7 +85,7 @@ import "C"
 import (
 	"runtime"
 
-	"github.com/trendvidia/gl-js"
+	"github.com/belluikit/gl-js"
 )
 
 type contextGL struct {

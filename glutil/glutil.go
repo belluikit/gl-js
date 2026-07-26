@@ -3,12 +3,12 @@
 // license that can be found in the LICENSE file.
 
 // Package glutil implements OpenGL utility functions.
-package glutil // import "github.com/trendvidia/gl-js/glutil"
+package glutil // import "github.com/belluikit/gl-js/glutil"
 
 import (
 	"fmt"
 
-	"github.com/trendvidia/gl-js"
+	"github.com/belluikit/gl-js"
 )
 
 // CreateProgram creates, compiles, and links a gl.Program.
