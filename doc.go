@@ -19,8 +19,8 @@ the new x/mobile/gl plan. It will exist and be fully supported until it can be s
 
 ## Usage
 
-This OpenGL binding has a ContextWatcher, which implements [glfw.ContextWatcher](https://godoc.org/github.com/goxjs/glfw#ContextWatcher)
-interface. Recommended usage is with github.com/goxjs/glfw package, which accepts a ContextWatcher in its Init, and takes on the responsibility
+This OpenGL binding has a ContextWatcher, which implements [glfw.ContextWatcher](https://pkg.go.dev/github.com/belluikit/glfw-js#ContextWatcher)
+interface. Recommended usage is with github.com/belluikit/glfw-js package, which accepts a ContextWatcher in its Init, and takes on the responsibility
 of notifying it when context is made current or detached.
 
 	if err := glfw.Init(gl.ContextWatcher); err != nil {
