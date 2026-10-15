@@ -1,8 +1,18 @@
-[![Tests](https://github.com/fyne-io/gl-js/actions/workflows/tests.yml/badge.svg)](https://github.com/fyne-io/gl-js/actions/workflows/tests.yml)
-[![Static Analysis](https://github.com/fyne-io/gl-js/actions/workflows/analysis.yml/badge.svg)](https://github.com/fyne-io/gl-js/actions/workflows/analysis.yml)
-[![GoDoc](https://godoc.org/github.com/fyne-io/gl-js?status.svg)](https://godoc.org/github.com/fyne-io/gl-js)
+[![Tests](https://github.com/belluikit/gl-js/actions/workflows/tests.yml/badge.svg)](https://github.com/belluikit/gl-js/actions/workflows/tests.yml)
+[![Static Analysis](https://github.com/belluikit/gl-js/actions/workflows/analysis.yml/badge.svg)](https://github.com/belluikit/gl-js/actions/workflows/analysis.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/belluikit/gl-js.svg)](https://pkg.go.dev/github.com/belluikit/gl-js)
 
 # GL
+
+**Fork of [fyne-io/gl-js](https://github.com/fyne-io/gl-js)**, maintained for
+[Bellui](https://bellui.com) ([belluikit/bellui](https://github.com/belluikit/bellui)).
+The module path is `github.com/belluikit/gl-js`.
+
+Lineage: [golang.org/x/mobile/gl](https://pkg.go.dev/golang.org/x/mobile/gl)
+→ [goxjs/gl](https://github.com/goxjs/gl)
+→ [fyne-io/gl-js](https://github.com/fyne-io/gl-js)
+→ belluikit/gl-js. It remains under the original BSD-style license
+([LICENSE](LICENSE), The Go Authors).
 
 Package gl is a Go cross-platform binding for OpenGL, with an OpenGL ES 2-like API.
 
@@ -21,13 +31,13 @@ the new x/mobile/gl plan. It will exist and be fully supported until it can be s
 ## Installation
 
 ```bash
-go get github.com/fyne-io/gl-js
+go get github.com/belluikit/gl-js
 ```
 
 ## Usage
 
-This OpenGL binding has a ContextWatcher, which implements [glfw.ContextWatcher](https://godoc.org/github.com/goxjs/glfw#ContextWatcher)
-interface. Recommended usage is with github.com/fyne-io/glfw-js package, which accepts a ContextWatcher in its Init, and takes on the responsibility
+This OpenGL binding has a ContextWatcher, which implements [glfw.ContextWatcher](https://pkg.go.dev/github.com/belluikit/glfw-js#ContextWatcher)
+interface. Recommended usage is with the [github.com/belluikit/glfw-js](https://github.com/belluikit/glfw-js) package, which accepts a ContextWatcher in its Init, and takes on the responsibility
 of notifying it when context is made current or detached.
 
 ```go
